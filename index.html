@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en"
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Tracker</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="sticky">
+      <div class="header">
+      <a class="twitter" target="_blank" href="https://twitter.com/RiceFarmerNFT"
+        ><img class="twitter-logo" src="./twitter-logo.png" alt=""
+      /></a>
+    </div>
+      <h3 class="add-movies">Add Movies</h3>
+      <form id="movie-form">
+        <label for="">Movie Name:</label>
+        <input type="text" name="titleTitle" id="movie-name" />
+        <br />
+        <label for="">Rating (0-10):</label>
+        <input
+          type="number"
+          name="ratingRating"
+          id="rating-score"
+          min="0"
+          max="10"
+          step=".5"
+        />
+        <br />
+        <button type="submit" id="submit-button">Submit</button>
+      </form>
+      <div class="sort">
+        <span>Sort:</span>
+        <button
+          onclick="window.scrollTo(0,0), window.location.reload(true)"
+          class="sort-random"
+        >
+          Random
+        </button>
+        <button
+          onclick="window.scrollTo(0,0), window.location.reload(true)"
+          class="sort-rating-high"
+        >
+          Rating (High to Low)
+        </button>
+        <button
+          onclick="window.scrollTo(0,0), window.location.reload()"
+          class="sort-rating-low"
+        >
+          Rating (Low to High)
+        </button>
+        <button
+          onclick="window.scrollTo(0,0), window.location.reload()"
+          class="sort-alphabetical-high"
+        >
+          Alphabetical (A-Z)
+        </button>
+        <button
+          onclick="window.scrollTo(0,0), window.location.reload()"
+          class="sort-alphabetical-low"
+        >
+          Alphabetical (Z-A)
+        </button>
+      </div>
+      <!-- <div id="director-div" class="director-div">
+        <button id="director-btn">Director</button>
+        <input
+          type="text"
+          id="director-input"
+          class="autocomplete-input"
+          value=""
+          placeholder="Filter by Director"
+        />
+        <ul id="director-list" class="autocomplete-list"></ul>
+      </div> -->
+    </div>
+    <div class="movie-data" id="movie-list">
+      <!-- DATA GOES HERE -->
+    </div>
+    <div class="footer"><center>&#169; 2022 Rice Labs 🍚<br>All Rights Reserved</center></div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
