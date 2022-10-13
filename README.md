@@ -20,6 +20,8 @@ https://user-images.githubusercontent.com/112427358/195411820-fbeda006-3c80-4ee0
 
 # Bugs / Upcoming Features
 - Refresh when "Delete" button is clicked
+- Disable duplicate movies added
+- Create initial load page
 - Hide Footer during Refresh runtime
 - Autofill dropdown to filter by Genre, Director, Actor
 - Light Mode
