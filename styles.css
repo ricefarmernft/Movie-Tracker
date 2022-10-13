@@ -192,43 +192,6 @@ ul {
     margin: 1vh;
 }
 
-/* DIRECTOR DIV */
-/* .autocomplete-input {
-    width: 100%;
-    border: none;
-    outline: none;
-    padding: .5rem 0 .5rem 0;
-    border-radius: 1rem;
-}
-.autocomplete-input::placeholder {
-    padding-left: .5rem;
-}
-.director-div {
-    width: 20rem;
-    position: relative;
-    display: block;
-}
-.autocomplete-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    max-width: 33.25rem;
-    max-height: 10rem;
-    overflow-y: auto;
-}
-
-.autocomplete-list li {
-    font-size: small;
-    padding: .25rem;
-    font-weight: bold;
-    cursor: pointer;
-    border-bottom: grey solid 1px;
-}
-.checkbox {
-    float: right;
-} */
-
 /* FOOTER */
 .footer {
     color: #ffffff;

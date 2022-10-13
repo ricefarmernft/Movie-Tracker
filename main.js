@@ -1,9 +1,9 @@
-// QUERY SELECTORS VARIABLES
+// QUERY SELECTORS HTML
 const form = document.querySelector("#movie-form");
 const movieSelect = document.querySelector("#movie-name");
 const rating = document.querySelector("#rating-score");
 const list = document.querySelector("#movie-list");
-
+// QUERY SELECTORS SORTING
 const sortRandom = document.querySelector(".sort-random");
 const sortRatingHigh = document.querySelector(".sort-rating-high");
 const sortRatingLow = document.querySelector(".sort-rating-low");
@@ -52,7 +52,6 @@ const getMovie = async (moviename) => {
   if (moviename) {
     // RETURN ARRAY OF MOVIE TITLES
     let includedMovies = movies.map((movie) => {
-      console.log(movie.title);
       return movie.title;
     });
     // CREATE RATING VARIABLE
@@ -64,7 +63,7 @@ const getMovie = async (moviename) => {
     const data = await response.json();
     // RETURN API DATA
     console.log(data);
-    // IF API DOES NOT RETURN A MOVIE
+    // IF API DOES NOT RETURN A MOVIE, ALERT ERROR
     if (data.Error) {
       alert("Movie Not Found!");
       // IF MOVIE ALREADY ADDED, ALERT ERROR
@@ -128,12 +127,11 @@ const addMovie = (
   // ADD TASK DIV TO MOVIE-LIST DIV, TOP FIRST
   list.insertBefore(taskDiv, list.children[0]);
   // CREATE RATING VALUE AND ADD TO TASK DIV
-  const myScore = document.createElement("div");
-  myScore.innerHTML = `${movieRating}`;
-  myScore.classList.add("rating-style");
-  myScore.classList.add(`rating-${movieRating * 10}`);
-  // myScore.classList= `rating-${movieRating}`
-  taskDiv.appendChild(myScore);
+  const ratingDiv = document.createElement("div");
+  ratingDiv.innerHTML = `${movieRating}`;
+  ratingDiv.classList.add("rating-style");
+  ratingDiv.classList.add(`rating-${movieRating * 10}`);
+  taskDiv.appendChild(ratingDiv);
   // CREATE MOVIE INFO DIV
   const movieDiv = document.createElement("div");
   movieDiv.innerHTML = `<strong>${movieTitle}</strong> ${movieYear}<br><span class="genre">${movieGenre}</span>`;
@@ -162,11 +160,11 @@ const addMovie = (
   // ADD ACTION DIV TO TASK DIV
   taskDiv.append(actionDiv);
   // CREATE PLOT INFO DROPDOWN DIV
-  const plotInfo = document.createElement("div");
-  plotInfo.innerHTML = `<strong>Director:</strong> ${movieDirector}<br><strong>Actors:</strong> ${movieActors}<br><strong>Plot:</strong> ${moviePlot}`;
-  plotInfo.classList.add("dropdown-content");
+  const plotDiv = document.createElement("div");
+  plotDiv.innerHTML = `<strong>Director:</strong> ${movieDirector}<br><strong>Actors:</strong> ${movieActors}<br><strong>Plot:</strong> ${moviePlot}`;
+  plotDiv.classList.add("dropdown-content");
   // ADD PLOT INFO DROPDOWN DIV TO ACTION DIV
-  actionDiv.append(plotInfo);
+  actionDiv.append(plotDiv);
   // ADD DELETE BUTTON FUNCTION
   delBtn.addEventListener("click", (event) => {
     event.preventDefault();
@@ -180,7 +178,7 @@ const addMovie = (
   });
   // PLOT DROPDOWN BUTTON FUNCTION
   plotBtn.addEventListener("click", (event) => {
-    plotInfo.classList.toggle("show");
+    plotDiv.classList.toggle("show");
   });
 };
 
