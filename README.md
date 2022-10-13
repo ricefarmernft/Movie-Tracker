@@ -16,7 +16,8 @@ There are multiple ways to sort the movie entries. These include: Random, Rating
 The Movie Name input is crossreferenced with the Open Movie Database API (https://omdbapi.com/). We can fetch the necessary data from the API and display it on our Movie Tracker. Entries are automatically saved in Local Storage in order to repopulate once the app is closed and opened again.
 
 ## Video Demo
-https://user-images.githubusercontent.com/112427358/195411820-fbeda006-3c80-4ee0-bbaf-0d844a9f05b6.mov
+
+https://user-images.githubusercontent.com/112427358/195662938-b8000e4d-c6a2-4aca-b402-9874abb9faf4.mov
 
 ## Bugs / Upcoming Features
 - ~~Refresh when "Delete" button is clicked~~
