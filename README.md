@@ -21,6 +21,7 @@ https://user-images.githubusercontent.com/112427358/195411820-fbeda006-3c80-4ee0
 ## Bugs / Upcoming Features
 - ~~Refresh when "Delete" button is clicked~~
 - ~~Disable duplicate movies added~~
+- ~~Update variable names~~
 - Add Styles to Alerts
 - Create initial load page
 - Hide Footer during Refresh runtime
