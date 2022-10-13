@@ -50,6 +50,11 @@ window.addEventListener("load", (event) => {
 // GET MOVIE DATA FROM API
 const getMovie = async (moviename) => {
   if (moviename) {
+    // RETURN ARRAY OF MOVIE TITLES
+    let includedMovies = movies.map((movie) => {
+      console.log(movie.title);
+      return movie.title;
+    });
     // CREATE RATING VARIABLE
     let myRating = rating.value;
     // FETCH API DATA
@@ -62,8 +67,11 @@ const getMovie = async (moviename) => {
     // IF API DOES NOT RETURN A MOVIE
     if (data.Error) {
       alert("Movie Not Found!");
-    } else {
+      // IF MOVIE ALREADY ADDED, ALERT ERROR
+    } else if (includedMovies.includes(data.Title)) {
+      alert("Movie already added!");
       // ADD NEW MOVIE DATA
+    } else {
       addMovie(
         data.Title,
         myRating,
@@ -161,12 +169,14 @@ const addMovie = (
   actionDiv.append(plotInfo);
   // ADD DELETE BUTTON FUNCTION
   delBtn.addEventListener("click", (event) => {
+    event.preventDefault();
     // REMOVE TASK DIV FROM MOVIE DATA
     list.removeChild(taskDiv);
     // UPDATE LOCAL STORAGE TO REMOVE MOVIE DATA
     let adjMovies = movies.filter((t) => t.title != movieTitle);
     localStorage.setItem("allMovies", JSON.stringify(adjMovies));
     localStorage.removeItem("movies");
+    window.location.reload(true);
   });
   // PLOT DROPDOWN BUTTON FUNCTION
   plotBtn.addEventListener("click", (event) => {
@@ -229,6 +239,7 @@ const sortByRatingLow = (array) => {
       }
       return 0;
     });
+    console.log(sortedMovies);
     localStorage.setItem("allMovies", JSON.stringify(sortedMovies));
     getMovie();
   });
