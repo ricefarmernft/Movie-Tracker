@@ -4,6 +4,8 @@
 
 This is an interactive webpage that allows you to track movies that you have watched and assign a rating (0-10) to them, built using Javascript, HTML, CSS.
 
+Use this app at: https://movie-tracker-eight.vercel.app/
+
 ## How to Use
 You need two inputs to create a movie entry. First, the Movie Name. Second, the Movie Rating from 0-10, which can include half points (.5). Occasionally, you may receive an alert "Movie Not Found!" if the Movie Name is not inputted correctly. Simply look up the full Movie Name and paste and that should resolve your issue.
 
