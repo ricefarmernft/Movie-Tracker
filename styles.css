@@ -200,7 +200,7 @@ ul {
 }
 
 /* MEDIA */
-@media screen and (max-width: 415px) {
+@media screen and (max-width: 480px) {
     #submit-button {
         font-size: 12px;
         height: 20px;
